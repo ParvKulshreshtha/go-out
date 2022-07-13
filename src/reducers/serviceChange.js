@@ -1,9 +1,9 @@
 const initialState = ""
 
-const serviceChange = (state = initialState,service) => {
-    console.log(service.type);
-    switch(service.type) {
-        case "SERVICE" : return service.service;
+const serviceChange = (state = initialState,action) => {
+    console.log(action.type);
+    switch(action.type) {
+        case "SERVICE" : return action.service;
         default : return state;
     }
 }

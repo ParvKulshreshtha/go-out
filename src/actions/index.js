@@ -4,3 +4,10 @@ export const service = (service) =>{
         service:service
     }
 }
+
+export const optionSelect = (option) =>{
+    return{
+        type:"OPTIONS",
+        option:option
+    }
+}

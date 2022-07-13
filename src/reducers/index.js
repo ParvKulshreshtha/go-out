@@ -1,8 +1,10 @@
 import serviceChange from "./serviceChange";
+import options from "./options";
 import { combineReducers } from "redux"
 
 const rootReducer = combineReducers({
-    serviceChange
+    serviceChange,
+    options
 })
 
 export default rootReducer

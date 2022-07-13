@@ -5,13 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './app/store'
 import { Provider } from 'react-redux'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { DisplayPage } from './components/Display Page/DisplayPage';
 
 store.subscribe(() => console.log(store.getState()))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App />
+    <Router> 
+      <Routes>
+        <Route exact path="/" element={<App />} />  
+        <Route path="/:service" element={<DisplayPage />} />  
+      </Routes>
+  </Router>  
   </Provider>
 );
 
