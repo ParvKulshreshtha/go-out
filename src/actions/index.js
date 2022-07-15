@@ -11,3 +11,17 @@ export const optionSelect = (option) =>{
         option:option
     }
 }
+
+export const coordinates = ({lat,lng}) =>{
+    return{
+        type:"COORDINATES",
+        coordinate:{lat, lng}
+    }
+}
+
+export const serviceDataChange = (data) =>{
+    return{
+        type:"SERVICE_DATA",
+        data:data
+    }
+}

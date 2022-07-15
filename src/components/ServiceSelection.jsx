@@ -24,11 +24,11 @@ export const ServiceSelection = (props) => {
     }
   return (
     <div style={{
+        position:`sticky`,
         padding:`1px`,
         backgroundColor:`white`,
         display:`inline`,
-        borderRadius:`15px`,
-    }}>
+     }}>
         <div style={{
         height:`70px`,
         backgroundColor:`rgba(255, 255, 255, 0.7)`,
