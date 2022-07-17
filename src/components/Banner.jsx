@@ -5,8 +5,7 @@ export const Banner = () => {
   return (
     <div style={{  
         // eslint-disable-next-line no-useless-concat
-        backgroundImage:
-        "url(https://cdn2.hubspot.net/hubfs/439788/Blog/Featured%20Images/Best%20Hotel%20Website%20Designs.jpg)",
+        backgroundImage:`url(https://cdn2.hubspot.net/hubfs/439788/Blog/Featured%20Images/Best%20Hotel%20Website%20Designs.jpg)`,
         height:`100vh`,
         width:`100vw`,
         backgroundRepeat: 'no-repeat',

@@ -1,7 +1,13 @@
 import React from 'react'
-import { GoogleMap,useJsApiLoader} from '@react-google-maps/api'
+import { useSelector } from 'react-redux/es/exports'
+import { GoogleMap,Marker,useJsApiLoader} from '@react-google-maps/api'
 
 export const Map = (props) => {
+  const location = useSelector(state => state.serviceLocation)
+  const locations = {lat: Number(location.lat),lng: Number(location.lng)}
+ 
+ 
+  console.log("location", locations);
   const {isLoaded} = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API
   })
@@ -13,17 +19,16 @@ export const Map = (props) => {
       </div>
     )
   }
-
-  console.log(props.coordinates,"dchgj");
   return (
     <div >
         <GoogleMap 
           center={props.coordinates}
           zoom={15} 
           mapContainerStyle={{width:'100%', height:'100vh', margin:'0px' }}
-          onChange={e=>{
-            props.setCoordinates({lat:e.center.lat, lng:e.center.lng})
+          onChange={e=>{ console.log(e)
           }}>
+            <Marker
+              position={locations} />
         </GoogleMap>
     </div>
     

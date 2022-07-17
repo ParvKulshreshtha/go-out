@@ -25,3 +25,10 @@ export const serviceDataChange = (data) =>{
         data:data
     }
 }
+
+export const serviceClickLocation = ({lat,lng}) => {
+    return{
+        type:"CLICK_LOCATION",
+        coordinate:{lat, lng}
+    }
+}

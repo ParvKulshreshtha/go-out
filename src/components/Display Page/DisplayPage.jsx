@@ -13,7 +13,6 @@ export const DisplayPage = () => {
 
     // useSelector()
     const optionSelection = useSelector((state) => (state.options))
-    const serviceSelect = useSelector((state) => (state.serviceChange))
     // useDispatch()
     const dispatch=useDispatch()
 
@@ -37,8 +36,9 @@ export const DisplayPage = () => {
     },[coordinate, dispatch, service])
 
     const service_data = useSelector((state) => (state.serviceData))
-
-
+    const errorData = {
+        name:"Loading..."
+    }
 
   return (
     <>
@@ -49,10 +49,17 @@ export const DisplayPage = () => {
             <div style={{
             margin:`10px`
         }}>
-            GoOut
+            <h1 style={{
+                color:`white`
+            }}>GoOut</h1>
         </div>
-
-            <ServiceSelection default={service} />
+            <div style={{
+                position:`sticky`,
+                top:`0`
+            }} >
+                <ServiceSelection  default={service} />
+            </div>
+            
         </div>
         {optionValueArray.includes(service)? 
         <h1 style={{
@@ -75,7 +82,7 @@ export const DisplayPage = () => {
                 <ServiceList 
                     key={i}
                     data={service} />):
-                    <h1>Loading...</h1>}
+                    <ServiceList data = {errorData}/>}
             </div>
             <div style={{
                 margin:`10px`,
