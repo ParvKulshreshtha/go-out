@@ -10,7 +10,6 @@ import { Map } from './Map';
 export const DisplayPage = () => {
     // service = /:url
     const { service } = useParams()
-
     // useSelector()
     const optionSelection = useSelector((state) => (state.options))
     // useDispatch()
