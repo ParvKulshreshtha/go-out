@@ -41,21 +41,17 @@ export const DisplayPage = () => {
 
   return (
     <>
-        <div style={{
-            backgroundImage:
-            "url(https://cdn2.hubspot.net/hubfs/439788/Blog/Featured%20Images/Best%20Hotel%20Website%20Designs.jpg)",
-        }}>
-            <div style={{
-            margin:`10px`
+        <div style={{ 
+            backgroundImage:`url(https://cdn2.hubspot.net/hubfs/439788/Blog/Featured%20Images/Best%20Hotel%20Website%20Designs.jpg)`,
+            backgroundRepeat: 'no-repeat',
+            display:`flex`,
+            flexDirection:'column',
         }}>
             <h1 style={{
-                color:`white`
+                color:`white`,
+                margin:`10px`
             }}>GoOut</h1>
-        </div>
-            <div style={{
-                position:`sticky`,
-                top:`0`
-            }} >
+            <div>
                 <ServiceSelection  default={service} />
             </div>
             

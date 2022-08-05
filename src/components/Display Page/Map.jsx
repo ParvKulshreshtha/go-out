@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux/es/exports'
-import { GoogleMap,Marker,useJsApiLoader} from '@react-google-maps/api'
+import { GoogleMap,InfoBox,InfoWindow,Marker,useJsApiLoader} from '@react-google-maps/api'
 
 export const Map = (props) => {
   const location = useSelector(state => state.serviceLocation)
@@ -27,6 +27,7 @@ export const Map = (props) => {
           mapContainerStyle={{width:'100%', height:'100vh', margin:'0px' }}
           onChange={e=>{ console.log(e)
           }}>
+            
             <Marker
               position={locations} />
         </GoogleMap>

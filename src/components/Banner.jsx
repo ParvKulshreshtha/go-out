@@ -13,7 +13,7 @@ export const Banner = () => {
         flexDirection:'column'
       }}>
       <div style={{
-        margin:`10px`
+        // margin:`10px`
       }}>
         GoOut
       </div>

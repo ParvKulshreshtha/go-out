@@ -46,7 +46,8 @@ export const ServiceSelection = (props) => {
                 border: `0 1px solid #aaaaaa`,
                 borderRadius: `0.3em`,
                 boxShadow: `inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4)`,
-                overflow: `hidden`
+                overflow: `hidden`,
+                margin:`5px`
             }} onChange={serviceChangeHandler} value={props.default} id="service" name="service">
                 {optionSelection.map((option,i) => (
                     <option key={i} value={option.value}>{option.text}</option>
